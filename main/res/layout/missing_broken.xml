@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#616161">
+
+    <Button
+        android:id="@+id/btn_viewAll"
+        android:layout_width="104dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/view_all"
+        android:textColor="#000000"
+        app:backgroundTint="#76FF03"
+        app:iconTint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_delete"
+        app:layout_constraintTop_toBottomOf="@+id/et_item_details" />
+
+    <Button
+        android:id="@+id/btn_add"
+        android:layout_width="104dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/add"
+        android:textColor="#000000"
+        app:backgroundTint="#76FF03"
+        app:iconTint="#FFFFFF"
+        app:layout_constraintEnd_toStartOf="@+id/btn_delete"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_item_details" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="@string/missing_broken_items"
+        android:textSize="35sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextContrastCheck" />
+
+    <EditText
+        android:id="@+id/et_item_name"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:hint="@string/item_name"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title"
+        tools:ignore="TextContrastCheck" />
+
+    <EditText
+        android:id="@+id/et_item_id"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="@string/item_id"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_item_name"
+        tools:ignore="TextContrastCheck" />
+
+    <CheckBox
+        android:id="@+id/cb_missing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/missing"
+        app:layout_constraintEnd_toStartOf="@id/cb_broken"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_item_id"
+        tools:ignore="TextContrastCheck" />
+
+    <CheckBox
+        android:id="@+id/cb_broken"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/broken"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/cb_missing"
+        app:layout_constraintTop_toBottomOf="@+id/et_item_id"
+        tools:ignore="TextContrastCheck" />
+
+    <Button
+        android:id="@+id/btn_delete"
+        android:layout_width="104dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/delete"
+        android:textColor="#000000"
+        app:backgroundTint="#76FF03"
+        app:iconTint="#FFFFFF"
+        app:layout_constraintEnd_toStartOf="@+id/btn_viewAll"
+        app:layout_constraintStart_toEndOf="@+id/btn_add"
+        app:layout_constraintTop_toBottomOf="@+id/et_item_details" />
+
+    <EditText
+        android:id="@+id/et_item_details"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="70dp"
+        android:ems="10"
+        android:hint="@string/item_details"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_item_id"
+        tools:ignore="TextContrastCheck" />
+
+    <ListView
+        android:id="@+id/lv_display"
+        android:layout_width="409dp"
+        android:layout_height="311dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_delete" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
